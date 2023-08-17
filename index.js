@@ -12,7 +12,7 @@ const { genSVG } = require('./Lib/genSVG');
  .prompt([
     {
         type: 'input',
-        name:'logoName',
+        name:'logoLtrs',
         message: "Enter 3 letter for your logo, no more, no less",
     },
 
@@ -24,7 +24,7 @@ const { genSVG } = require('./Lib/genSVG');
 
     {
         type: 'input',
-        name: 'logoColor',
+        name: 'logoShapeColor',
         message:"What color would you like your logo? (ex: #012456  OR color name)",
     },
 
@@ -39,13 +39,13 @@ const { genSVG } = require('./Lib/genSVG');
 ])
 //AFTER the user input , THEN we use that data ,
 //We have a svgPath var with value of "./Examples/logo.svg"
-//finalLogo will have the value of genShape imported function with the parameter of data(from input)
+//logoResult will have the value of genShape imported function with the parameter of data(from input)
 .then((data) => {
   const svgPath = "./Examples/logo.svg";
-  const finalLogo = genShape(data);
+  const logoResult = genShape(data);
 
   // Generates code to display logo
-  fs.writeFile(svgPath, genSVG(finalLogo), (err) =>
+  fs.writeFile(svgPath, genSVG(logoResult), (err) =>
     err
       ? console.error(err)
       : console.log("Successfully generated logo into logo.svg")
