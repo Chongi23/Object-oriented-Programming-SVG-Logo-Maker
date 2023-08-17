@@ -3,6 +3,7 @@
 const isCss3Color = require("is-css3-color");
 
 class Shape {
+   
     constructor({ logoLtrs, logoTextColor, logoShape, logoShapeColor }) {
         //Check if all parameters are provided and of correct type. If not throw an error
         this.logoShape = logoShape;
@@ -47,7 +48,12 @@ render() {
 
 }
 
-}
+};
+
+
+
+
+
 
 //We will import this in other files, that is why we export it
 module.exports=Shape;
