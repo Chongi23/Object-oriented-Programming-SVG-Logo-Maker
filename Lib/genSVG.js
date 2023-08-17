@@ -1,3 +1,5 @@
+const shape = require("./shape");
+
 
 //Function to generate SVG 
 const genSVG = (shape) => {
