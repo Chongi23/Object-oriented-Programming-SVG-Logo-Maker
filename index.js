@@ -41,6 +41,7 @@ const { genSVG } = require('./Lib/genSVG');
 //We have a svgPath var with value of "./Examples/logo.svg"
 //logoResult will have the value of genShape imported function with the parameter of data(from input)
 .then((data) => {
+    console.log(data);
   const svgPath = "./Examples/logo.svg";
   const logoResult = genShape(data);
 

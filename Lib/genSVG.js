@@ -1,5 +1,5 @@
 const Shape = require("./shape");
-const genShape = require("./genShape");
+const {genShape} = require("./genShape");
 
 
 //const newShape = genShape(data);
@@ -8,11 +8,11 @@ const genShape = require("./genShape");
 
 //Function to generate SVG 
 function genSVG(logoResult) {
-
+console.log(logoResult);
 
   return `
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-    ${genShape(logoResult).render()}
+    ${logoResult.render()}
       <text
         x="50%"
         y="${Shape.logoShape != "triangle" ? "50%" : "40%"}"

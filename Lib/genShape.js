@@ -1,13 +1,13 @@
 const Triangle = require("./triangle");
 const Circle = require("./circle");
 const Square = require("./square");
-const Shape = require("./shape");
 
 
 const genShape = (data) => {
     const { logoShape } = data;
+    console.log(logoShape);
     let shape;
-    switch (logoShape) {
+    switch (logoShape[0]) {
         case 'triangle' :
             shape = new Triangle(data);
             return shape;
