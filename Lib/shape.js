@@ -22,7 +22,13 @@ class Shape {
         if (!input) throw new Error("Input cannot be empty");
     }
 
-    
+    validateTextResponse(input) {
+        this.ifResponseEmpty(input);
+
+        if (input.lenth > 3) {
+            throw new Error("Logo text cannot be more than 3 characters");
+        }
+    }
 
 
 }
