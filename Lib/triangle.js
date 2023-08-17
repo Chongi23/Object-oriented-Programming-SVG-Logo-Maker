@@ -12,5 +12,5 @@ class Triangle extends Shape {
   }
 }
 
-module.exports = Triangle;
+module.exports =  Triangle ;
 

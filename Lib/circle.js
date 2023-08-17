@@ -11,4 +11,4 @@ class Circle extends Shape {
   }
 }
 
-module.exports = Circle;
+module.exports =  Circle ;
