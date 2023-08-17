@@ -1,8 +1,9 @@
-//Function to generate SVG shape
+
+//Function to generate SVG 
 const genSVG = (shape) => {
     return `
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-      ${shape.render()}
+    ${shape.render()}
       <text
         x="50%"
         y="${shape.logoShape != "triangle" ? "50%" : "40%"}"
