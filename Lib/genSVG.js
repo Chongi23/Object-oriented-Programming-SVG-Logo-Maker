@@ -1,0 +1,19 @@
+//Function to generate SVG shape
+const genSVG = (shape) => {
+    return `
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+      ${shape.render()}
+      <text
+        x="50%"
+        y="${shape.logoShape != "triangle" ? "50%" : "40%"}"
+        text-anchor="middle"
+        fill="${shape.logoTextColor}"
+        font-size="2.3rem" letter-spacing="2" dy=".3em"
+        font-family="monospace">${shape.logoLtrs}
+      </text>
+    </svg>
+    `;
+  };
+  
+  module.exports = { genSVG };
+  
