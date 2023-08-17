@@ -1,9 +1,8 @@
 const Shape = require("./shape");
-const {genShape} = require("./genShape");
+const genShape = require("./genShape");
 
 
-const newShape = genShape(data);
-newShape.render();
+
 
 
 //Function to generate SVG 
@@ -15,11 +14,11 @@ console.log(logoResult);
     ${logoResult.render()}
       <text
         x="50%"
-        y="${Shape.logoShape != "triangle" ? "50%" : "40%"}"
+         y="${logoResult.logoShape[0] != "triangle" ? "50%" : "40%"}"
         text-anchor="middle"
-        fill="${Shape.logoTextColor}"
+        fill="${logoResult.logoTextColor}"
         font-size="2.3rem" letter-spacing="2" dy=".3em"
-        font-family="monospace">${Shape.logoLtrs}
+        font-family="monospace">${logoResult.logoLtrs}
       </text>
     </svg>
     `;

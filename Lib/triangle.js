@@ -8,7 +8,7 @@ class Triangle extends Shape {
   }
   render() {
     //The <polygon> element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point.
-    return `<polygon points="100 0, 0 ,0 50, 100" fill="${this.logoColor}" />`;
+    return `<polygon points="100 0, 0 ,0 50, 100" fill="${this.logoShapeColor}" />`;
   }
 }
 

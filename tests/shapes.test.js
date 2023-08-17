@@ -3,38 +3,39 @@ var testCases = [
   {
     desc: "expected to throw an error if user response is empty",
     input: {},
+  
     expectedErr: new Error("Invalid, input cannot be empty"),
   },
   {
     desc: "expected to throw an error if logo text is longer than 3 letters",
-    input: { logoName: "noah" },
+    input: { logoLtrs: "band" },
     expectedErr: new Error(
       "Invalid, logo text cannot be longer than 3 characters"
     ),
   },
   {
     desc: "expected to throw error if response is not a valid or recognized CSS color",
-    input: { logoName: "Sun", textColor: "NotColor" },
+    input: { logoLtrs: "SHE", textColor: "NotColor" },
     expectedErr: new Error(
       "Please enter a valid CSS color name or hexadecimal code"
     ),
   },
   {
     desc: "expected to throw an error if render() is called",
-    input: { logoName: "Sun", textColor: "green", bgColor: "brown" },
+    input: { logoLtrs: "BEE", logoTextColor: "green", logoShapeColor: "pink" },
     expectedErr: new Error("Child shapes must implement a render() method"),
     shouldRender: true,
   },
   {
-    desc: "expected to add background colour if it is a valid color",
-    input: { logoName: "Sun", textColor: "green", bgColor: "brown" },
-    expectedKey: "bgColor",
-    expectedValue: "brown",
+    desc: "expected to add background color if it is a valid color",
+    input: { logoLtrs: "BEE", logoTextColor: "green", logoShapeColor: "pink" },
+    expectedKey: "logoShapeColor",
+    expectedValue: "pink",
   },
   {
     desc: "expected to add text colour if it is a valid color",
-    input: { logoName: "Sun", textColor: "red", bgColor: "brown" },
-    expectedKey: "textColor",
+    input: { logoLtrs: "BEE", logoTextColor: "red", logoShapeColor: "green" },
+    expectedKey: "logoTextColor",
     expectedValue: "red",
   },
 ];
@@ -46,7 +47,7 @@ describe("Shape test suite", () => {
         expect(shape.render).toThrow(tc.expectedErr);
       } else if (tc.expectedErr) {
         const shape = () => new Shape(tc.input);
-        expect(shape).toThrow(tc.expectedErr);
+        expect(shape).toBe(tc.expectedErr);
       } else {
         const shape = new Shape(tc.input);
         expect(shape[tc.expectedKey]).toBe(tc.expectedValue);

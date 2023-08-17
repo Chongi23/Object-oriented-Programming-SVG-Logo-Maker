@@ -7,7 +7,7 @@ class Circle extends Shape {
   }
   render() {
     //The <circle> SVG element is an SVG basic shape, used to draw circles based on a center point and a radius.
-    return `<circle cx="50" cy="50" r="50" fill="${this.logoColor}" />`;
+    return `<circle cx="50" cy="50" r="50" fill="${this.logoShapeColor}" />`;
   }
 }
 

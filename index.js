@@ -42,7 +42,7 @@ const { genSVG } = require('./Lib/genSVG');
 //logoResult will have the value of genShape imported function with the parameter of data(from input)
 .then((data) => {
     console.log(data);
-  const svgPath = "./Examples/logo.svg";
+  const svgPath = "./dist/logo.svg";
   const logoResult = genShape(data);
 
   // Generates code to display logo
