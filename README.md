@@ -1,5 +1,10 @@
 # 10 Object-oriented Programming: SVG Logo Maker
 
+GITHUB PAGES::
+  https://chongi23.github.io/Object-oriented-Programming-SVG-Logo-Maker/
+
+  WALK-THRU VIDEO:
+  https://youtu.be/P2bpfpZijNc
 
 This is anapplication that takes in user input to generate a logo and save it as an [SVG file] The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a `logo.svg` file.
 
