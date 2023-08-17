@@ -10,19 +10,16 @@ const genShape = (data) => {
     switch (logoShape) {
         case 'triangle' :
             shape = new Triangle(data);
-            //return genTriangle;
+            return shape;
            
-            break;
 
             case 'square':
                 shape=  new Square(data);
-                //return genSquare ;
-                 break;
+                return shape ;
 
                 case 'circle':
                     shape = new Circle(data);
-                   // return genCircle;
-                       break;
+                    return shape;
 
                     default:
                         return "Whoops, looks like something went wrong!";

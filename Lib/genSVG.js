@@ -1,22 +1,30 @@
+
 const genShape = require("./genShape");
+
+//const newShape = genShape(data);
+//newShape.render();
 
 
 //Function to generate SVG 
-const genSVG = (genShape) => {
-    return `
+function genSVG(newShape) {
+
+
+  return `
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-    ${genShape.render()}
+    ${newShape.render()}
       <text
         x="50%"
-        y="${genShape.logoShape != "triangle" ? "50%" : "40%"}"
+        y="${newShape.logoShape != "triangle" ? "50%" : "40%"}"
         text-anchor="middle"
-        fill="${genShape.logoTextColor}"
+        fill="${newShape.logoTextColor}"
         font-size="2.3rem" letter-spacing="2" dy=".3em"
-        font-family="monospace">${shape.logoLtrs}
+        font-family="monospace">${newShape.logoLtrs}
       </text>
     </svg>
     `;
-  };
+
+ 
+}
   
   module.exports = { genSVG };
   
