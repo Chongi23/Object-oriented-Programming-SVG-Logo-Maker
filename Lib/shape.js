@@ -17,7 +17,8 @@ class Shape {
         this.logoShapeColor = logoShapeColor;
 
     }
-     
+     //Text Validation Section
+
     ifResponseEmpty(input) {
         if (!input) throw new Error("Input cannot be empty");
     }
@@ -26,9 +27,27 @@ class Shape {
         this.ifResponseEmpty(input);
 
         if (input.lenth > 3) {
-            throw new Error("Logo text cannot be more than 3 characters");
+            throw new Error("Text cannot be more than 3 characters");
         }
     }
 
+// Color Validation Section
+validateColorResponse(input) {
+    this.ifResponseEmpty(input);
+    //Changes all css named colors to lowercase, uniformity, not bug up package
+    //input = input.toLowerCase();
+
+    if(!isCss3Color(input)) {
+        throw new Error("Enter Valid hex code or CSS color");
+    }
+}
+
+render() {
+    throw new Error("Child shapes need to use render() method");
 
 }
+
+}
+
+//We will import this in other files, that is why we export it
+module.exports=Shape;
