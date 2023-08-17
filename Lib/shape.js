@@ -50,7 +50,7 @@ render() {
 
 };
 
-
+module.exports = Shape;
 
 
 

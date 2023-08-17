@@ -2,8 +2,8 @@ const Shape = require("./shape");
 const {genShape} = require("./genShape");
 
 
-//const newShape = genShape(data);
-//newShape.render();
+const newShape = genShape(data);
+newShape.render();
 
 
 //Function to generate SVG 
