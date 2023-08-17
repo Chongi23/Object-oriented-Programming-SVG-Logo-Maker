@@ -1,4 +1,4 @@
-const Shape = require("./shape.js");
+const Shape = require("./shape");
 //The extends keyword can be used to subclass custom classes
 class Square extends Shape {
   constructor(data) {
